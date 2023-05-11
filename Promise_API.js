@@ -23,7 +23,7 @@ let p3 = new Promise((resolve, reject) => {
 //     console.log(value);
 // })
 
-// Promise.allSettled : It will show status of all the promised wheather it is rejected or resolved (it will definitely run)
+// Promise.allSettled : It will show status of all the promises wheather it is rejected or resolved (it will definitely run)
 // let allPromisettled = Promise.allSettled([p1,p2,p3]);
 // allPromisettled.then((value) => {
 //     console.log(value);
@@ -35,20 +35,20 @@ let p3 = new Promise((resolve, reject) => {
 //     console.log(value);
 // })
 
-// Promise.race : It will return resolved value of first promise that gets resolved
+// Promise.any : It will return resolved value of first promise that gets resolved
 // let promiseAny = Promise.any([p1,p2,p3]); 
 // promiseAny.then((value) => { 
 //     console.log(value);
 // })
 
-// Promise.resolve : It will teturn resolved value
-let promiseResolve = Promise.resolve(6); 
-promiseResolve.then((value) => { 
-    console.log(value);
-})
-
-// Promise.race : It will teturn rejected error
-// let promiseReject = Promise.reject(new Error("New error")); 
-// promiseReject.then((value) => { 
+// Promise.resolve : It will return resolved value
+// let promiseResolve = Promise.resolve(6); 
+// promiseResolve.then((value) => { 
 //     console.log(value);
 // })
+
+// Promise.reject : It will return rejected error
+let promiseReject = Promise.reject(new Error("New error")); 
+promiseReject.then((value) => { 
+    console.log(value);
+})
