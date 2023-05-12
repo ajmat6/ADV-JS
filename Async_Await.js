@@ -1,3 +1,5 @@
+// async function returns a promise
+
 // async function ajmat()
 // {
 //     return 7;
@@ -6,6 +8,8 @@
 // ajmat().then((value) => {
 //     console.log(value);
 // })
+
+//using await in async function
 async function ajmat() {
     let delhiweather = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -18,7 +22,9 @@ async function ajmat() {
             resolve('24 degree celcius');
         }, 4000);
     })
-    
+
+    //these are when ajmat function is not async function
+
     // delhiweather.then((value) => {
     //     console.log(value);
     // })
@@ -34,18 +40,15 @@ async function ajmat() {
     let jaipurw = await Jaipurweather;
     console.log(jaipurw);
 
-    return [delhiw, jaipurw];
-
-    // console.log(delhiw);
-    // console.log(jaipurw);
+    return [delhiw, jaipurw]; //returning the promise values of the async funciton
 }
 
+// parallely different functions are running with async await:
 let newfunction = () => {
     console.log("hello this is new function");
 }
 
 let a = ajmat();
-let b = newfunction();
+let b = newfunction(); //this will run and will not wait for ajmat function to get resolved
 console.log(b);
-// console.log(newfunction);
 console.log(a);
