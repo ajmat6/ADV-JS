@@ -1,3 +1,4 @@
+//finally use:
 try
 {
     let a = 0;
@@ -13,7 +14,7 @@ finally
     console.log("I am finally and I will always run irrespective of the error is caused or not");
 }
 
-//why finally
+//why finally??
 try
 {
     let a = 0;
