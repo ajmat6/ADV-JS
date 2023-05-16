@@ -9,5 +9,5 @@ console.log(document.cookie) // will show all cookies
 let key = prompt("Enter your cookie key");
 let value = prompt("Enter your cookie value");
 
-document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`; // encodes key value entered and decodeURiComponent can be used to decode the existing cookies
 console.log(document.cookie); 
